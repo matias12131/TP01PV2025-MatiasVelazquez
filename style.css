@@ -11,7 +11,7 @@ body{
         font-family: Arial, sans-serif;
         margin: 0;
         padding: 0;
-        line-height: 1,5; 
+        line-height: 1,5;
         background-color: antiquewhite;
 }
 
@@ -39,4 +39,39 @@ section{
     padding: 20px;
     margin: 10px;
     border-radius: 5px;
+}
+
+form{
+    padding: 50px 55px;
+    box-shadow: 0 0 20px rgba(0,0,0, 0.2);
+    text-align: center;
+    width: 340px;    
+}
+
+.input-group{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+label{
+    color:black;
+    font-size:16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+input, textarea{
+    padding: 13px 25px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    border: 2px solid #B2B2B2;
+}
+
+.form-txt a{
+    text-decoration: none;
+}
+
+.btn:hover{
+    background-color: #B2B2B2;
 }
