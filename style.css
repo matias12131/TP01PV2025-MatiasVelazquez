@@ -1,5 +1,5 @@
 header, footer{
-    background: #000;
+    background: #4d0101dd;
     color:white;
     align-items: center;
     padding: 10px;
@@ -81,4 +81,11 @@ input, textarea{
     display: flex;
     justify-content: center; /* Centra horizontalmente */
     padding: 40px;
+}
+
+img{
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
