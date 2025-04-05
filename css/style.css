@@ -61,7 +61,7 @@ label{
     margin-bottom: 10px;
 }
 
-input, textarea{
+input,button, textarea{
     padding: 13px 25px;
     border-radius: 20px;
     margin-bottom: 15px;
@@ -74,6 +74,7 @@ input, textarea{
 
 .btn:hover{
     background-color: #B2B2B2;
+     border: 2px solid #969696;
 }
 
 .contacto{

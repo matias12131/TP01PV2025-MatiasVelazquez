@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport " content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
         <style>
             footer{
                 background: #4d0101dd;
@@ -28,21 +28,22 @@
 
         <main>
    <section class="contacto">
-        <form action="https://formsubmit.co/waldosteamucumarelhombreoso@gmail.com" method="POST">
+    
+        <form onsubmit="submit_Form()">
             <h2>Contacto</h2>
             <div class="input-group">
             <label for="name">Nombre</label>
-            <input type="text" name="name" id="name" placeholder="Nombre">
+            <input type="text" name="name" id="name" placeholder="Nombre" required>
             <label for="last_name"> Apellido</label>
-            <input type="tel" name="last_name" id="last_name" placeholder="Apellido">
+            <input type="tel" name="last_name" id="last_name" placeholder="Apellido" required>
             <label for="email" >Email</label>
-            <input type="email" name="email" id="email" placeholder="Email">
+            <input type="email" name="email" id="email" placeholder="ejemplo@gmail.com" required>
             <label for="message">Mensaje</label>
-            <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensaje"></textarea>
+            <textarea name="message" id="message" cols="30" rows="5" placeholder="Mensaje" required></textarea>
             <div class="form-txt">
                 <a href="#terminos">Terminos y Condiciones</a>
                 </div> 
-                <input class="btn" type="submit" value="Enviar">
+            <button type="submit" class="btn">Enviar</button>
             </div>
         </form>
     </section>
@@ -56,9 +57,32 @@
 
     <footer>
         <span>Programacion Visual - Tp1 </span>
-        <span>Matias L. Velazquez - EDM</span>
+        <span>Matias L. Velazquez - EDM </span>
     </footer>
     
+    <script>
+        function submit_Form(){
+            
+            event.preventDefault();
+            
+            var nombre = document.getElementById("name").value.trim();
+            var apellido = document.getElementById("last_name").value.trim();
+            var correo = document.getElementById("email").value.trim();
+            var mensaje = document.getElementById("message").value.trim();
+
+            if (!nombre || !apellido || !correo || !mensaje) {
+                alert("Por favor completá todos los campos requeridos.");
+                return false;
+            }
+
+            console.log("Nombre: " + nombre);
+            console.log("Correo: " + correo);
+
+            alert("¡Gracias por tu mensaje "+nombre+", "+apellido+"! ¡Lo leeremos para seguir mejorando nuestra pagina!");
+            
+        }
+    </script>
+
     </body>
 
 </html>
